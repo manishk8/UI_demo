@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Image</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
+    <div class="container">
+        <div class="wrapper">
+            <div class="main-block">
+                <div class="image-block">
+                    <img src="flower.jpg" id="flower1" alt="flower" />
+                </div>
+                <div class="
+                        btn-block">
+                    <button type="button" onclick="zoomin()">Zoom In</button>
+                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="main-block">
+                <div class="image-block">
+                    <img src="flower.jpg" id="flower2" alt="flower" />
+                </div>
+                <div class="btn-block">
+                    <button type="button" onclick="zoomin()">Zoom In</button>
+                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="main-block">
+                <div class="image-block">
+                    <img src="flower.jpg" id="flower3" alt="flower" />
+                </div>
+                <div class="btn-block">
+                    <button type="button" onclick="zoomin()">Zoom In</button>
+                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="main-block">
+                <div class="image-block">
+                    <img src="flower.jpg" id="flower4" alt="flower" />
+                </div>
+                <div class="btn-block">
+                    <button type="button" onclick="zoomin()">Zoom In</button>
+                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function zoomin() {
+            console.log("zoom in")
+            var myImg = document.getElementById("flower1");
+            var currWidth = myImg.clientWidth;
+            if (currWidth == 500) {
+                alert("Maximum zoom-in level reached.");
+            } else {
+                myImg.style.width = (currWidth + 50) + "px";
+            }
+        }
+        function zoomout() {
+            console.log("zoom out")
+            var myImg = document.getElementById("flower1");
+            var currWidth = myImg.clientWidth;
+            if (currWidth == 50) {
+                alert("Maximum zoom-out level reached.");
+            } else {
+                myImg.style.width = (currWidth - 50) + "px";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
