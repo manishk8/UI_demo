@@ -15,10 +15,9 @@
                 <div class="image-block">
                     <img src="flower.jpg" id="flower1" alt="flower" />
                 </div>
-                <div class="
-                        btn-block">
-                    <button type="button" onclick="zoomin()">Zoom In</button>
-                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                <div class="btn-block">
+                    <button type="button" onclick="zoomin('flower1')">Zoom In</button>
+                    <button type="button" onclick="zoomout('flower1')">Zoom Out</button>
                 </div>
             </div>
         </div>
@@ -28,8 +27,8 @@
                     <img src="flower.jpg" id="flower2" alt="flower" />
                 </div>
                 <div class="btn-block">
-                    <button type="button" onclick="zoomin()">Zoom In</button>
-                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                    <button type="button" onclick="zoomin('flower2')">Zoom In</button>
+                    <button type="button" onclick="zoomout('flower2')">Zoom Out</button>
                 </div>
             </div>
         </div>
@@ -39,8 +38,8 @@
                     <img src="flower.jpg" id="flower3" alt="flower" />
                 </div>
                 <div class="btn-block">
-                    <button type="button" onclick="zoomin()">Zoom In</button>
-                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                    <button type="button" onclick="zoomin('flower3')">Zoom In</button>
+                    <button type="button" onclick="zoomout('flower3')">Zoom Out</button>
                 </div>
             </div>
         </div>
@@ -50,17 +49,17 @@
                     <img src="flower.jpg" id="flower4" alt="flower" />
                 </div>
                 <div class="btn-block">
-                    <button type="button" onclick="zoomin()">Zoom In</button>
-                    <button type="button" onclick="zoomout()">Zoom Out</button>
+                    <button type="button" onclick="zoomin('flower4')">Zoom In</button>
+                    <button type="button" onclick="zoomout('flower4')">Zoom Out</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        function zoomin() {
+        function zoomin(flower) {
             console.log("zoom in")
-            var myImg = document.getElementById("flower1");
+            var myImg = document.getElementById(flower);
             var currWidth = myImg.clientWidth;
             if (currWidth == 500) {
                 alert("Maximum zoom-in level reached.");
@@ -68,9 +67,9 @@
                 myImg.style.width = (currWidth + 50) + "px";
             }
         }
-        function zoomout() {
+        function zoomout(flower) {
             console.log("zoom out")
-            var myImg = document.getElementById("flower1");
+            var myImg = document.getElementById(flower);
             var currWidth = myImg.clientWidth;
             if (currWidth == 50) {
                 alert("Maximum zoom-out level reached.");

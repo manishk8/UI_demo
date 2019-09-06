@@ -6,7 +6,7 @@
 .wrapper {
     display: flex;
     margin-bottom: 24px;
-    width: 100%;
+    width: 25%;
 }
 .main-block {
     position: relative;
@@ -51,15 +51,15 @@
 }
 
 /* css for mobile devices */
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+/* css for tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
     .wrapper {
         width: 50%;
     }
 } 
-
-/* css for tablet */
-@media screen and (min-width: 992px) {
-    .wrapper {
-        width: 25%;
-    }
-}
